@@ -1,6 +1,6 @@
-//Version_JS;Version_TInjectMin;Version_CEF4Min;
-//2.0.3.0;1.0.0.9;78.3.0
-//
+
+startMonitor(1);
+
 
 function getAllGroupContacts(Contacts) {
 	SetConsoleMessage("GetAllGroupContacts", JSON.stringify(Contacts));	
