@@ -3,11 +3,7 @@ onmessage = (res) => {
     window.WAPI.sendMessageToID(res.data.id, res.data.message);
   }
   if (res.data.event === 'getAllChats') {
-    const chats = window.WAPI.getAllChats();
-    postMessage({
-      event: 'AllChats',
-      result: chats;
-    });
+    window.WAPI.getAllChats();
   }
 };
 
