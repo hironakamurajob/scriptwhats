@@ -1,6 +1,4 @@
 
-startMonitor(1);
-
 
 function getAllGroupContacts(Contacts) {
 	SetConsoleMessage("GetAllGroupContacts", JSON.stringify(Contacts));	
@@ -55,7 +53,11 @@ function SetConsoleMessage(jsName, resultValue) {
         name: jsName,
         result: '{"result":' + resultValue + '}'
     }
-    console.log(JSON.stringify(Obj));
+    postMessage({
+    event: 'SetConsoleMessage',
+    name: jsName,
+    result: resultValue
+  });
 }
 
 var intervalMonitor;
